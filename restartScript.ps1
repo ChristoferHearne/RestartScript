@@ -51,7 +51,7 @@ PowerShell.exe -WindowStyle Minimized{
 
     Write-Host "Module exists"
 
-    Write-Host "Starting Restart-timer, please do not close this window"
+    Write-Host "Starting Restart-timer... please do not close this window"
     
     RestartComputer
     } 
