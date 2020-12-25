@@ -7,6 +7,8 @@ PowerShell.exe -WindowStyle Minimized{
      New-BurntToastNotification -Text "Restart", "The computer is restarting to keep it fresh and fast, it will restart soon (5 minutes left)" -AppLogo .\restart.png -Header(
         New-BTHeader -Title '5 MINUTES UNTIL RESTART' -Id 0
     )
+
+    Write-Host "5 minutes until restart"
     
     Invoke-Command $xCmdString
 
@@ -14,23 +16,30 @@ PowerShell.exe -WindowStyle Minimized{
         New-BTHeader -Title '4 MINUTES UNTIL RESTART' -Id 0
     )
 
+    Write-Host "4 minutes until restart"
+
     Invoke-Command $xCmdString
 
     New-BurntToastNotification -Text "Restart", "The computer is restarting to keep it fresh and fast, it will restart soon (3 minutes left)" -AppLogo .\restart.png -Header(
         New-BTHeader -Title '3 MINUTES UNTIL RESTART' -Id 0
     )
+    Write-Host "3 minutes until restart"
     
     Invoke-Command $xCmdString
 
     New-BurntToastNotification -Text "Restart", "The computer is restarting to keep it fresh and fast, it will restart soon (2 minutes left)" -AppLogo .\restart.png -Header(
         New-BTHeader -Title '2 MINUTES UNTIL RESTART' -Id 0
     )
+
+    Write-Host "2 minutes until restart"
     
     Invoke-Command $xCmdString
 
     New-BurntToastNotification -Text "Restart", "The computer is restarting to keep it fresh and fast, it will restart soon (1 minutes left)" -AppLogo .\restart.png -Header(
         New-BTHeader -Title '1 MINUTES UNTIL RESTART' -Id 0
     )
+
+    Write-Host "1 minute until restart"
     
     Invoke-Command $xCmdString
 
@@ -42,7 +51,7 @@ PowerShell.exe -WindowStyle Minimized{
 
     Write-Host "Restarting Computer"
 
-    Restart-Computer $env:COMPUTERNAME -force
+    Restart-Computer $env:COMPUTERNAME -confirm
     }
 
     Write-Host "Searching for BurntToast Module" 
